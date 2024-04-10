@@ -1,16 +1,12 @@
-class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        int solution[] = new int[2];
-        for (int i = 0; i < nums.length; i++){
-            for (int j = (i + 1); j < nums.length; j++){
-                if (nums[i] + nums[j] == target){
-                    solution[0] = i;
-                    solution[1] = j;
-                    return solution;
-                }
-            }
-        }
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        answer = []
+        for i in range(len(nums)):
+            for j in range(i+1, len(nums)):
+                if ((nums[i] + nums[j]) == target):
+                    answer.append(i)
+                    answer.append(j)
+        return answer
+                    
+
         
-        return solution;
-    }
-}
